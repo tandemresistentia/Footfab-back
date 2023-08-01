@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from api.views import get_shipping_rates
+from api.views import shipping_rates_view,contact_form_submission
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/shipping-rates/', get_shipping_rates),
+    path('api/shipping-rates/', shipping_rates_view),
+    path('submit_contact_form/', contact_form_submission, name='submit_contact_form'),
 ]
